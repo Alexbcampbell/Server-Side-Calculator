@@ -7,6 +7,11 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.post('/calculate', (req, res) => {
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
 app.use(express.static('public'));
 
 app.listen(PORT, function () {
