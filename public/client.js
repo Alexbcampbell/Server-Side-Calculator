@@ -15,4 +15,17 @@ function submitPost() {
   console.log('CLICK WORKS');
 
   values = [];
+
+  $.ajax({
+    type: 'POST',
+    url: '/calculate',
+    data: calculations,
+  })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (err) {
+      console.log(err);
+      alert('DID NOT CALCULATE');
+    });
 }
