@@ -9,10 +9,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/calculate', (req, res) => {
-  const inputVals = req.body.values;
-  //console.log(inputVals);
+  values = req.body;
+  console.log(values);
   //res.sendStatus(200);
-  function calculator
+});
+
+app.get('/calculate', (req, res) => {
+  console.log(history);
+  res.send(history);
 });
 
 app.use(express.static('public'));
