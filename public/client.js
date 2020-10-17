@@ -2,8 +2,8 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('HELLO');
-  $('.js-button-submit').on('click', submitPost);
-  $('.js-button-clear').on('click', clearValues);
+  $('.js-button-submit').on('click', submitPost); //Submits numbers to be calculated
+  $('.js-button-clear').on('click', clearValues); //Clears input fields
 }
 
 function clearValues() {
@@ -19,7 +19,7 @@ function submitPost() {
   $.ajax({
     type: 'POST',
     url: '/calculate',
-    data: calculations,
+    data: values,
   })
     .then(function (response) {
       console.log(response);
