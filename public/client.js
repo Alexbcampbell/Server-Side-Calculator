@@ -10,6 +10,8 @@ function onReady() {
   $('.js-button-sub').on('click', subtractionBtn);
   $('.js-button-mul').on('click', multiplyBtn);
   $('.js-button-div').on('click', divisionBtn);
+
+  submitGet();
 }
 
 function clickHandlerSubmit() {
@@ -61,7 +63,7 @@ function render(values) {
     let equation = values[i];
     $('.js-calc-total').text(equation.total);
     $('.js-calc-history').append(
-      `<li>${equation.numOne} ${equation.operator} ${equation.numTwo} = ${equation.total}</li>`
+      `<li>${equation.valueOne} ${equation.operator} ${equation.valueTwo} = ${equation.total}</li>`
     );
   }
 }
