@@ -18,16 +18,15 @@ function clickHandlerSubmit() {
   //values to submit on click
   let values = {
     numOne: $('.js-input-one').val(),
+    operator,
     numTwo: $('.js-input-two').val(),
-    operator: operator,
   };
 
   submitPost(values);
 }
 
 function submitPost(values) {
-  // console.log('CLICK WORKS');
-
+  //saves values object to server
   $.ajax({
     type: 'POST',
     url: '/calculate',
@@ -71,22 +70,18 @@ function render(values) {
 }
 
 function additionBtn() {
-  console.log('+');
   operator = '+';
 }
 
 function subtractionBtn() {
-  console.log('-');
   operator = '-';
 }
 
 function multiplyBtn() {
-  console.log('*');
   operator = '*';
 }
 
 function divisionBtn() {
-  console.log('/');
   operator = '/';
 }
 

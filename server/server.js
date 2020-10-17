@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.post('/calculate', (req, res) => {
   //Storing received information from client side to SERVER
-  equation = req.body;
+  let equation = req.body;
   calculate(equation.numOne, equation.operator, equation.numTwo);
   function calculate(valOne, valOp, valTwo) {
     let calcVal = 0;
@@ -32,7 +32,7 @@ app.post('/calculate', (req, res) => {
     operator: equation.operator,
     valueTwo: equation.numTwo,
     total: finalValue,
-  }); //push past calulations to DOM via append in client.js
+  }); //push past calculations to DOM via append in client.js
   res.sendStatus(200);
 });
 
