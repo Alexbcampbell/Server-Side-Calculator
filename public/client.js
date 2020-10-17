@@ -3,7 +3,7 @@ $(document).ready(onReady);
 let operator;
 
 function onReady() {
-  console.log('HELLO');
+  //console.log('HELLO');
   $('.js-button-submit').on('click', clickHandlerSubmit); //Submits numbers to be calculated
   $('.js-button-clear').on('click', clearValues); //Clears input fields
   $('.js-button-add').on('click', additionBtn);
@@ -15,6 +15,7 @@ function onReady() {
 }
 
 function clickHandlerSubmit() {
+  //values to submit on click
   let values = {
     numOne: $('.js-input-one').val(),
     numTwo: $('.js-input-two').val(),
@@ -25,7 +26,7 @@ function clickHandlerSubmit() {
 }
 
 function submitPost(values) {
-  console.log('CLICK WORKS');
+  // console.log('CLICK WORKS');
 
   $.ajax({
     type: 'POST',
@@ -62,6 +63,7 @@ function render(values) {
   for (let i = 0; i < values.length; i++) {
     let equation = values[i];
     $('.js-calc-total').text(equation.total);
+    //items that will show in history when equation is submitted
     $('.js-calc-history').append(
       `<li>${equation.valueOne} ${equation.operator} ${equation.valueTwo} = ${equation.total}</li>`
     );
