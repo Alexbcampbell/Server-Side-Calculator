@@ -6,10 +6,10 @@ function onReady() {
   //console.log('HELLO');
   $('.js-button-submit').on('click', clickHandlerSubmit); //Submits numbers to be calculated
   $('.js-button-clear').on('click', clearValues); //Clears input fields
-  $('.js-button-add').on('click', additionBtn);
-  $('.js-button-sub').on('click', subtractionBtn);
-  $('.js-button-mul').on('click', multiplyBtn);
-  $('.js-button-div').on('click', divisionBtn);
+  $('.js-button-add').on('click', additionBtn); //addition
+  $('.js-button-sub').on('click', subtractionBtn); //subtraction
+  $('.js-button-mul').on('click', multiplyBtn); //multiply
+  $('.js-button-div').on('click', divisionBtn); //division
 
   submitGet();
 }

@@ -11,7 +11,9 @@ app.use(bodyParser.json());
 app.post('/calculate', (req, res) => {
   //Storing received information from client side to SERVER
   let equation = req.body;
+
   calculate(equation.numOne, equation.operator, equation.numTwo);
+
   function calculate(valOne, valOp, valTwo) {
     let calcVal = 0;
     if (valOp === '+') {
@@ -23,7 +25,6 @@ app.post('/calculate', (req, res) => {
     } else if (valOp === '/') {
       calcVal = Number(valOne) / Number(valTwo);
     } //calculator works correctly, all operators complete task required
-
     console.log(calcVal);
     finalValue = calcVal;
   }
